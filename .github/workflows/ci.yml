@@ -1,0 +1,49 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      - name: go test -race
+        run: go test -race ./...
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      # gofmt and go vet rather than a pinned linter: a linter that lags the Go
+      # release fails CI for reasons that have nothing to do with the code.
+      - name: gofmt
+        run: test -z "$(gofmt -l .)"
+      - name: go vet
+        run: go vet ./...
+
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.25"
+      - name: build
+        run: go build -buildvcs=false -o /tmp/radar ./cmd/radar
+      # The whole pipeline, offline, with no token. If the digest ever changes, the
+      # golden test in the previous job says so; this one proves the binary runs.
+      - name: run offline
+        run: |
+          /tmp/radar --items testdata/fixtures/items-scan-2026-09.json --limit 6 | tee /tmp/payload.txt
+          grep -q '📌' /tmp/payload.txt
+          grep -q '🔗' /tmp/payload.txt
+          test "$(grep -c '^[0-9]  •' /tmp/payload.txt)" = "6"

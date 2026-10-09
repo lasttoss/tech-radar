@@ -1,0 +1,22 @@
+{
+  "verdicts": [
+    {
+      "item": "Qwen/Qwen3-VL-8B-Instruct",
+      "verdict": "reject",
+      "evidence": "state-reading from a game frame returned empty content: all 3165 characters went into the thinking block, and this tag always thinks, so it cannot be asked to answer without it",
+      "date": "2026-09-28"
+    },
+    {
+      "item": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "verdict": "watch",
+      "evidence": "read 6 of 7 fields of a 980x768 frame correctly in 9.1s / 62 tokens locally; wrong on region colours (said 2, there are 4). Kept as the baseline; did not displace the pipeline",
+      "date": "2026-09-28"
+    },
+    {
+      "item": "Anionex/agent-vision-toolkit",
+      "verdict": "watch",
+      "evidence": "the harness was verified before the model was blamed (CDN reachable, 200, 1.18 MB), which is what turned a white page into a model finding rather than a pipeline bug",
+      "date": "2026-09-28"
+    }
+  ]
+}

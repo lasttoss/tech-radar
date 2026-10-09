@@ -1,0 +1,827 @@
+[
+  {
+    "source": "huggingface",
+    "id": "autotrust/JEV-27B-VL",
+    "title": "autotrust/JEV-27B-VL",
+    "meta": [
+      "image-text-to-text",
+      "apache-2.0",
+      "♥3.3k",
+      "1.5M downloads"
+    ],
+    "desc": "transformers, safetensors, qwen3_5, image-text-to-text",
+    "url": "https://huggingface.co/autotrust/JEV-27B-VL",
+    "likes": 3279,
+    "created": "2026-09-30T05:02:23Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "jev",
+      "system-one",
+      "system-two",
+      "typed-decisions",
+      "decision-model",
+      "calibrated-probabilities",
+      "multimodal",
+      "vision",
+      "zero-shot",
+      "decision-index",
+      "recommendation",
+      "lora",
+      "vllm",
+      "conversational",
+      "en",
+      "dataset:SargeDev/jev-distill-corpus-v3",
+      "arxiv:2512.16899",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:adapter:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "autotrust/GEV-26B-Decide",
+    "title": "autotrust/GEV-26B-Decide",
+    "meta": [
+      "text-classification",
+      "apache-2.0",
+      "♥2.0k",
+      "909.8k downloads"
+    ],
+    "desc": "transformers, safetensors, gemma4, image-text-to-text",
+    "url": "https://huggingface.co/autotrust/GEV-26B-Decide",
+    "likes": 2039,
+    "created": "2026-10-02T04:20:21Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "gemma4",
+      "image-text-to-text",
+      "system-one",
+      "system-two",
+      "adaptive-thinking",
+      "typed-decisions",
+      "decision-model",
+      "calibrated-probabilities",
+      "jev",
+      "noul",
+      "choice",
+      "score",
+      "lora",
+      "mixture-of-experts",
+      "multimodal",
+      "vllm",
+      "text-classification",
+      "en",
+      "base_model:google/gemma-4-26B-A4B-it",
+      "base_model:adapter:google/gemma-4-26B-A4B-it",
+      "license:apache-2.0",
+      "model-index",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "google/embeddinggemma-2",
+    "title": "google/embeddinggemma-2",
+    "meta": [
+      "feature-extraction",
+      "apache-2.0",
+      "♥1.3k",
+      "29.2k downloads"
+    ],
+    "desc": "transformers, safetensors, embedding_gemma2, feature-extraction",
+    "url": "https://huggingface.co/google/embeddinggemma-2",
+    "likes": 1261,
+    "created": "2026-09-14T14:53:42Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "embedding_gemma2",
+      "feature-extraction",
+      "embedding",
+      "sentence-transformers",
+      "multimodal-embedding",
+      "multimodal",
+      "vision",
+      "audio",
+      "video",
+      "image-feature-extraction",
+      "audio-feature-extraction",
+      "video-feature-extraction",
+      "sentence-similarity",
+      "multilingual",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "Cloudflare/clef",
+    "title": "Cloudflare/clef",
+    "meta": [
+      "image-text-to-text",
+      "apache-2.0",
+      "♥1.9k",
+      "12.1k downloads"
+    ],
+    "desc": "transformers, safetensors, qwen3_5, image-text-to-text",
+    "url": "https://huggingface.co/Cloudflare/clef",
+    "likes": 1908,
+    "created": "2026-09-30T21:15:35Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "clef",
+      "cloudflare",
+      "systemone",
+      "decision-model",
+      "qwen3.8",
+      "post-train",
+      "image-text-to-typed-output",
+      "multimodal",
+      "structured-output",
+      "classification",
+      "custom-code",
+      "conversational",
+      "base_model:Qwen/Qwen3.8-27B",
+      "base_model:finetune:Qwen/Qwen3.8-27B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "Aleph-Alpha/Kolibri-1",
+    "title": "Aleph-Alpha/Kolibri-1",
+    "meta": [
+      "text-generation",
+      "apache-2.0",
+      "♥823",
+      "8.5k downloads"
+    ],
+    "desc": "vllm, safetensors, kolibri1, reasoning",
+    "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+    "likes": 823,
+    "created": "2026-10-02T05:54:02Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "vllm",
+      "safetensors",
+      "kolibri1",
+      "reasoning",
+      "moe",
+      "text-generation",
+      "conversational",
+      "de",
+      "en",
+      "arxiv:2512.11614",
+      "arxiv:2601.17858",
+      "base_model:Aleph-Alpha/Kolibri-1-BF16",
+      "base_model:quantized:Aleph-Alpha/Kolibri-1-BF16",
+      "license:apache-2.0",
+      "eval-results",
+      "fp8",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+    "title": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+    "meta": [
+      "text-to-image",
+      "other",
+      "♥3.7k",
+      "2.0M downloads"
+    ],
+    "desc": "gguf, qwen, image-generation, comfyui",
+    "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+    "likes": 3713,
+    "created": "2026-09-20T15:51:13Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "gguf",
+      "qwen",
+      "image-generation",
+      "comfyui",
+      "comfyui-gguf",
+      "text-to-image",
+      "base_model:Qwen/Qwen-Image-2.1",
+      "base_model:quantized:Qwen/Qwen-Image-2.1",
+      "license:other",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "jialinyyzz/humanizer",
+    "title": "jialinyyzz/humanizer",
+    "meta": [
+      "text-generation",
+      "apache-2.0",
+      "♥694",
+      "29.5k downloads"
+    ],
+    "desc": "gguf, safetensors, gemma4_unified, image-text-to-text",
+    "url": "https://huggingface.co/jialinyyzz/humanizer",
+    "likes": 694,
+    "created": "2026-09-11T05:00:16Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "gguf",
+      "safetensors",
+      "gemma4_unified",
+      "image-text-to-text",
+      "humanizer",
+      "transformers",
+      "text-rewriting",
+      "rewriting",
+      "paraphrase",
+      "style-transfer",
+      "llama.cpp",
+      "gemma4",
+      "text-generation",
+      "en",
+      "zh",
+      "base_model:google/gemma-4-12B",
+      "base_model:finetune:google/gemma-4-12B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "conversational"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+    "title": "Venastine-Research/Xing4.0-29B-A4B-GGUF",
+    "meta": [
+      "text-generation",
+      "apache-2.0",
+      "♥670",
+      "38.7k downloads"
+    ],
+    "desc": "transformers, safetensors, gguf, xing4_0",
+    "url": "https://huggingface.co/Venastine-Research/Xing4.0-29B-A4B-GGUF",
+    "likes": 670,
+    "created": "2026-09-17T18:37:31Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "gguf",
+      "xing4_0",
+      "text-generation",
+      "conversational",
+      "custom_code",
+      "arxiv:2512.24157",
+      "arxiv:2507.18013",
+      "base_model:XingChen-AGI/Xing4.0-29B-A4B",
+      "base_model:quantized:XingChen-AGI/Xing4.0-29B-A4B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "autotrust/GLM5.3-Flash-E224-DGX-Spark",
+    "title": "autotrust/GLM5.3-Flash-E224-DGX-Spark",
+    "meta": [
+      "image-text-to-text",
+      "mit",
+      "♥552",
+      "11.5k downloads"
+    ],
+    "desc": "vllm, safetensors, glm5_next, autotrust",
+    "url": "https://huggingface.co/autotrust/GLM5.3-Flash-E224-DGX-Spark",
+    "likes": 552,
+    "created": "2026-10-06T22:49:26Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "vllm",
+      "safetensors",
+      "glm5_next",
+      "autotrust",
+      "moe",
+      "nvfp4",
+      "modelopt",
+      "dgx-spark",
+      "gb10",
+      "blackwell",
+      "expert-pruned",
+      "image-text-to-text",
+      "conversational",
+      "en",
+      "zh",
+      "base_model:zai-org/GLM-5.3-Flash",
+      "base_model:quantized:zai-org/GLM-5.3-Flash",
+      "license:mit",
+      "8-bit",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "Lightricks/LTX-2.5",
+    "title": "Lightricks/LTX-2.5",
+    "meta": [
+      "image-to-video",
+      "other",
+      "♥7.0k",
+      "1.7M downloads"
+    ],
+    "desc": "diffusion-single-file, image-to-video, text-to-video, video-to-video",
+    "url": "https://huggingface.co/Lightricks/LTX-2.5",
+    "likes": 6987,
+    "created": "2026-07-23T07:55:24Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "diffusion-single-file",
+      "image-to-video",
+      "text-to-video",
+      "video-to-video",
+      "image-text-to-video",
+      "audio-to-video",
+      "text-to-audio",
+      "video-to-audio",
+      "audio-to-audio",
+      "text-to-audio-video",
+      "image-to-audio-video",
+      "image-text-to-audio-video",
+      "ltx-video",
+      "lightricks",
+      "comfyui",
+      "ltx-2.5",
+      "ltx",
+      "en",
+      "de",
+      "es",
+      "fr",
+      "ja",
+      "ko",
+      "zh",
+      "it",
+      "pt",
+      "arxiv:2601.03233",
+      "license:other",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "Cloudflare/clef-flash",
+    "title": "Cloudflare/clef-flash",
+    "meta": [
+      "image-text-to-text",
+      "apache-2.0",
+      "♥704",
+      "19.0k downloads"
+    ],
+    "desc": "transformers, safetensors, qwen3_5, image-text-to-text",
+    "url": "https://huggingface.co/Cloudflare/clef-flash",
+    "likes": 704,
+    "created": "2026-09-30T21:15:36Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "qwen3_5",
+      "image-text-to-text",
+      "clef",
+      "cloudflare",
+      "systemone",
+      "decision-model",
+      "qwen3.5",
+      "post-train",
+      "image-text-to-typed-output",
+      "multimodal",
+      "structured-output",
+      "classification",
+      "custom-code",
+      "conversational",
+      "base_model:Qwen/Qwen3.5-9B",
+      "base_model:finetune:Qwen/Qwen3.5-9B",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ]
+  },
+  {
+    "source": "huggingface",
+    "id": "convaiinnovations/laya",
+    "title": "convaiinnovations/laya",
+    "meta": [
+      "text-classification",
+      "apache-2.0",
+      "♥5.4k",
+      "41.5k downloads"
+    ],
+    "desc": "transformers, safetensors, laya, system-one",
+    "url": "https://huggingface.co/convaiinnovations/laya",
+    "likes": 5413,
+    "created": "2026-09-18T05:05:55Z",
+    "lastMoved": "0001-01-01T00:00:00Z",
+    "topics": [
+      "transformers",
+      "safetensors",
+      "laya",
+      "system-one",
+      "calibrated-decisions",
+      "rlcd",
+      "classification",
+      "routing",
+      "scoring",
+      "guardrails",
+      "moderation",
+      "reinforcement-learning",
+      "commercial-use",
+      "text-classification",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us",
+      "deploy:azure"
+    ]
+  },
+  {
+    "source": "huggingface-paper",
+    "id": "2610.09059",
+    "title": "EDiS: Edge Disjoint Subgraph Sparsification Framework for Graph Neural Networks",
+    "meta": [
+      "paper",
+      "1 upvotes",
+      "2026-10-06T00:00:00.000Z"
+    ],
+    "desc": "Sparse GNN training reduces computation, but deciding which edges to keep can be costly. Reusing one sparse graph is cheap, but locks training to a fixed topology, while varying it across epochs can require repeated s...",
+    "url": "https://huggingface.co/papers/2610.09059",
+    "likes": 1,
+    "created": "2026-10-06T00:00:00Z",
+    "lastMoved": "0001-01-01T00:00:00Z"
+  },
+  {
+    "source": "huggingface-paper",
+    "id": "2610.12399",
+    "title": "SpaceFlow: Locally Controllable 3D Generation",
+    "meta": [
+      "paper",
+      "1 upvotes",
+      "2026-10-08T00:00:00.000Z"
+    ],
+    "desc": "Current 3D generation methods lack explicit local control: geometric adherence is often defined by a global control strength, and appearance cannot be specified locally. We present SpaceFlow, a training-free pipeline...",
+    "url": "https://huggingface.co/papers/2610.12399",
+    "likes": 1,
+    "created": "2026-10-08T00:00:00Z",
+    "lastMoved": "0001-01-01T00:00:00Z"
+  },
+  {
+    "source": "huggingface-paper",
+    "id": "2610.11287",
+    "title": "REMORY: Learning Residual Memory for Context Compaction",
+    "meta": [
+      "paper",
+      "1 upvotes",
+      "2026-10-08T00:00:00.000Z"
+    ],
+    "desc": "Long-horizon agents compact their history to continue within a finite context window, but a textual summary alone may not support every subsequent decision. We introduce REMORY, a neural memory network that supplement...",
+    "url": "https://huggingface.co/papers/2610.11287",
+    "likes": 1,
+    "created": "2026-10-08T00:00:00Z",
+    "lastMoved": "0001-01-01T00:00:00Z"
+  },
+  {
+    "source": "huggingface-paper",
+    "id": "2610.12459",
+    "title": "WorldGuide: Goal-Directed Video World Model for Procedural Task Execution",
+    "meta": [
+      "paper",
+      "4 upvotes",
+      "2026-10-08T00:00:00.000Z"
+    ],
+    "desc": "Video generators and video-based world models can synthesize plausible visual trajectories, but long-horizon procedural tasks require generation to adapt to what has actually been produced. A model must determine the...",
+    "url": "https://huggingface.co/papers/2610.12459",
+    "likes": 4,
+    "created": "2026-10-08T00:00:00Z",
+    "lastMoved": "0001-01-01T00:00:00Z"
+  },
+  {
+    "source": "huggingface-paper",
+    "id": "2610.12421",
+    "title": "Beyond Spatio-Temporal Priors: A Generalizable Approach for Dense Correspondence Matching",
+    "meta": [
+      "paper",
+      "24 upvotes",
+      "2026-10-08T00:00:00.000Z"
+    ],
+    "desc": "Dense correspondence matching has historically been bounded by simplifying spatio-temporal priors, such as smooth motion and rigid geometry. While effective for classical tasks, these assumptions break down in image e...",
+    "url": "https://huggingface.co/papers/2610.12421",
+    "likes": 24,
+    "created": "2026-10-08T00:00:00Z",
+    "lastMoved": "0001-01-01T00:00:00Z"
+  },
+  {
+    "source": "github",
+    "id": "Stellar-Kolo/kolo-contracts",
+    "title": "Stellar-Kolo/kolo-contracts",
+    "meta": [
+      "Rust",
+      "⭐131",
+      "created 2026-10-09"
+    ],
+    "desc": "Kolo's Rust Soroban contracts on Stellar for community savings circles, rotational contributions, ordered payouts, and goal-based savings.",
+    "url": "https://github.com/Stellar-Kolo/kolo-contracts",
+    "stars": 131,
+    "created": "2026-10-09T09:25:39Z",
+    "lastMoved": "2026-10-09T10:13:17Z",
+    "topics": [
+      "community-savings",
+      "kolo",
+      "rust",
+      "smart-contracts",
+      "soroban",
+      "soroban-smart-contracts",
+      "stellar",
+      "stellar-smart-contracts"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "Stellar-Kolo/kolo-backend",
+    "title": "Stellar-Kolo/kolo-backend",
+    "meta": [
+      "TypeScript",
+      "⭐131",
+      "created 2026-10-09"
+    ],
+    "desc": "WhatsApp-first Stellar backend for Kolo: wallet operations, Stellar payments, Soroban savings groups, and queued community messaging.",
+    "url": "https://github.com/Stellar-Kolo/kolo-backend",
+    "stars": 131,
+    "created": "2026-10-09T09:25:01Z",
+    "lastMoved": "2026-10-09T10:13:20Z",
+    "topics": [
+      "community-savings",
+      "express",
+      "kolo",
+      "soroban",
+      "soroban-smart-contracts",
+      "stellar",
+      "stellar-sdk",
+      "typescript",
+      "whatsapp"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "Stellar-Kolo/kolo-frontend",
+    "title": "Stellar-Kolo/kolo-frontend",
+    "meta": [
+      "TypeScript",
+      "⭐131",
+      "created 2026-10-09"
+    ],
+    "desc": "Kolo's Stellar community savings web app: Next.js member and admin dashboards, with wallet and Soroban integrations in development.",
+    "url": "https://github.com/Stellar-Kolo/kolo-frontend",
+    "stars": 131,
+    "created": "2026-10-09T09:20:57Z",
+    "lastMoved": "2026-10-09T10:13:23Z",
+    "topics": [
+      "community-savings",
+      "fintech",
+      "kolo",
+      "nextjs",
+      "soroban-smart-contracts",
+      "stellar",
+      "stellar-wallet",
+      "typescript"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "ZacharyZhang-NY/ElyOffice",
+    "title": "ZacharyZhang-NY/ElyOffice",
+    "meta": [
+      "Rust",
+      "AGPL-3.0",
+      "⭐41",
+      "created 2026-10-09"
+    ],
+    "desc": "Offline-first desktop office suite in Rust and GPUI: documents, spreadsheets, presentations, PDF, Git, Markdown",
+    "url": "https://github.com/ZacharyZhang-NY/ElyOffice",
+    "stars": 41,
+    "created": "2026-10-09T02:22:41Z",
+    "lastMoved": "2026-10-09T06:36:31Z"
+  },
+  {
+    "source": "github",
+    "id": "RuoJi6/ARTEX",
+    "title": "RuoJi6/ARTEX",
+    "meta": [
+      "Go",
+      "AGPL-3.0",
+      "⭐36",
+      "created 2026-10-09"
+    ],
+    "desc": "Autumn-27/ARTEX 二开",
+    "url": "https://github.com/RuoJi6/ARTEX",
+    "stars": 36,
+    "created": "2026-10-09T00:56:36Z",
+    "lastMoved": "2026-10-09T06:42:21Z"
+  },
+  {
+    "source": "github",
+    "id": "WouterApts/openik-unity",
+    "title": "WouterApts/openik-unity",
+    "meta": [
+      "C#",
+      "MIT",
+      "⭐26",
+      "created 2026-10-09"
+    ],
+    "desc": "Inverse kinematics solvers and joint constraints for Unity.",
+    "url": "https://github.com/WouterApts/openik-unity",
+    "stars": 26,
+    "created": "2026-10-09T01:19:19Z",
+    "lastMoved": "2026-10-09T02:04:23Z"
+  },
+  {
+    "source": "github",
+    "id": "therahulexe/rahulfirstrepo",
+    "title": "therahulexe/rahulfirstrepo",
+    "meta": [
+      "TypeScript",
+      "⭐24",
+      "created 2026-10-09"
+    ],
+    "desc": "my first repo",
+    "url": "https://github.com/therahulexe/rahulfirstrepo",
+    "stars": 24,
+    "created": "2026-10-09T06:51:44Z",
+    "lastMoved": "2026-10-09T07:07:21Z"
+  },
+  {
+    "source": "github",
+    "id": "AIPMAndy/how-to-survive-unemployment",
+    "title": "AIPMAndy/how-to-survive-unemployment",
+    "meta": [
+      "HTML",
+      "MIT",
+      "⭐23",
+      "created 2026-10-09"
+    ],
+    "desc": "失业自救开源手册：N/N+1/2N、失业金、医保、社保、公积金、求职与现金流。50项行动任务、6份实操SOP，附北京上海政策原文。",
+    "url": "https://github.com/AIPMAndy/how-to-survive-unemployment",
+    "stars": 23,
+    "created": "2026-10-09T03:22:58Z",
+    "lastMoved": "2026-10-09T07:28:22Z",
+    "topics": [
+      "career",
+      "career-guide",
+      "checklist",
+      "china",
+      "job-search",
+      "layoff",
+      "open-source",
+      "personal-finance",
+      "unemployment"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "VanquisherFoyer/cs2",
+    "title": "VanquisherFoyer/cs2",
+    "meta": [
+      "HTML",
+      "⭐20",
+      "created 2026-10-09"
+    ],
+    "desc": "🔥 CS2-Skin-Changer-2026",
+    "url": "https://github.com/VanquisherFoyer/cs2",
+    "stars": 20,
+    "created": "2026-10-09T00:33:16Z",
+    "lastMoved": "2026-10-09T00:33:31Z",
+    "topics": [
+      "cs2-all-skins",
+      "cs2-awp-skin",
+      "cs2-gloves",
+      "cs2-karambit",
+      "cs2-knife-skins",
+      "cs2-skin-changer-2026",
+      "cs2-skin-changer-free-2026",
+      "cs2-skins-free"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "wousp112/justin-sun-alan-shao-ai-notes",
+    "title": "wousp112/justin-sun-alan-shao-ai-notes",
+    "meta": [
+      "NOASSERTION",
+      "⭐18",
+      "created 2026-10-09"
+    ],
+    "desc": "孙宇晨 × 邵艾伦 4 小时对谈：全文 + 精华 + 一键丢给 AI 的规划 prompt",
+    "url": "https://github.com/wousp112/justin-sun-alan-shao-ai-notes",
+    "stars": 18,
+    "created": "2026-10-09T06:01:01Z",
+    "lastMoved": "2026-10-09T08:13:36Z",
+    "topics": [
+      "ai",
+      "ai-agents",
+      "alan-shao",
+      "career-development",
+      "learning",
+      "prompt-engineering"
+    ]
+  },
+  {
+    "source": "github",
+    "id": "lichuang/how-to-read-code",
+    "title": "lichuang/how-to-read-code",
+    "meta": [
+      "Apache-2.0",
+      "⭐17",
+      "created 2026-10-09"
+    ],
+    "url": "https://github.com/lichuang/how-to-read-code",
+    "stars": 17,
+    "created": "2026-10-09T02:12:10Z",
+    "lastMoved": "2026-10-09T06:34:36Z"
+  },
+  {
+    "source": "github",
+    "id": "WonderLantern/z7-qemu",
+    "title": "WonderLantern/z7-qemu",
+    "meta": [
+      "C",
+      "GPL-2.0",
+      "⭐13",
+      "created 2026-10-09"
+    ],
+    "desc": "Experimental Nikon Z7 machine for QEMU, functional RAW/ISP/LCD and research tools. Bring your own firmware.",
+    "url": "https://github.com/WonderLantern/z7-qemu",
+    "stars": 13,
+    "created": "2026-10-09T03:43:54Z",
+    "lastMoved": "2026-10-09T03:49:27Z",
+    "topics": [
+      "arm",
+      "camera",
+      "emulation",
+      "nikon-z7",
+      "qemu",
+      "research",
+      "wonderlantern"
+    ]
+  },
+  {
+    "source": "github-release",
+    "id": "vllm-project/vllm@v0.31.0",
+    "title": "v0.31.0",
+    "meta": [
+      "vllm-project/vllm",
+      "released 2026-10-05"
+    ],
+    "desc": "# v0.31.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0",
+    "created": "2026-10-05T06:44:55Z",
+    "lastMoved": "2026-10-05T06:44:55Z"
+  },
+  {
+    "source": "github-release",
+    "id": "vllm-project/vllm@v0.30.0",
+    "title": "v0.30.0",
+    "meta": [
+      "vllm-project/vllm",
+      "released 2026-09-22"
+    ],
+    "desc": "# v0.30.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0",
+    "created": "2026-09-22T05:20:54Z",
+    "lastMoved": "2026-09-22T05:20:54Z"
+  },
+  {
+    "source": "github-release",
+    "id": "vllm-project/vllm@v0.29.0",
+    "title": "v0.29.0",
+    "meta": [
+      "vllm-project/vllm",
+      "released 2026-09-09"
+    ],
+    "desc": "# v0.29.0",
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+    "created": "2026-09-09T08:54:49Z",
+    "lastMoved": "2026-09-09T08:54:49Z"
+  }
+]

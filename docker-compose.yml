@@ -1,0 +1,20 @@
+# One service, no ports, nothing to expose: the radar talks outwards only. Set the
+# token to deliver, leave it empty to see exactly what would have been delivered.
+services:
+  radar:
+    image: golang:1.25
+    working_dir: /app
+    volumes:
+      - .:/app
+      - gocache:/go
+    environment:
+      TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN:-}"
+      TELEGRAM_CHAT_ID: "${TELEGRAM_CHAT_ID:-}"
+      GITHUB_TOKEN: "${GITHUB_TOKEN:-}"
+    command:
+      - sh
+      - -c
+      - 'if [ -n "$$TELEGRAM_BOT_TOKEN" ]; then go run ./cmd/radar --send; else go run ./cmd/radar --limit 6; fi'
+
+volumes:
+  gocache:

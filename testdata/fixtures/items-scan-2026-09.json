@@ -1,0 +1,66 @@
+[
+  {
+    "source": "huggingface",
+    "id": "Qwen/Qwen3-VL-8B-Instruct",
+    "title": "Qwen/Qwen3-VL-8B-Instruct",
+    "meta": ["8B", "vision", "apache-2.0", "♥1154"],
+    "desc": "Vision-language model, listed as a candidate for reading game state from a frame.",
+    "url": "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+    "likes": 1154,
+    "created": "2026-08-01T00:00:00Z"
+  },
+  {
+    "source": "huggingface",
+    "id": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "title": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "meta": ["7B", "vision", "apache-2.0"],
+    "desc": "Older vision-language model already served locally; kept as the baseline to beat.",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct",
+    "likes": 900,
+    "created": "2025-02-01T00:00:00Z"
+  },
+  {
+    "source": "github",
+    "id": "Anionex/agent-vision-toolkit",
+    "title": "Anionex/agent-vision-toolkit",
+    "meta": ["Python", "MIT", "⭐1.2k", "created 2026-08-27"],
+    "desc": "Toolkit that gives text-only models image abilities: multi-image questions, UI recovery, GUI automation.",
+    "url": "https://github.com/Anionex/agent-vision-toolkit",
+    "stars": 1215,
+    "topics": ["agent", "vision", "gui-automation"],
+    "created": "2026-08-27T00:00:00Z"
+  },
+  {
+    "source": "github",
+    "id": "abi/screenshot-to-code",
+    "title": "abi/screenshot-to-code",
+    "meta": ["TypeScript", "MIT", "⭐79.8k", "created 2026-09-09"],
+    "desc": "Screenshot to clean HTML and Tailwind. The largest project in the visual-frontend segment.",
+    "url": "https://github.com/abi/screenshot-to-code",
+    "stars": 79792,
+    "topics": ["vision", "frontend", "code-generation"],
+    "created": "2023-11-01T00:00:00Z"
+  },
+  {
+    "source": "github",
+    "id": "Riemann-Dynamics/Matrix-Game-3.5",
+    "title": "Riemann-Dynamics/Matrix-Game-3.5",
+    "meta": ["Apache-2.0", "⭐174", "created 2026-09-01"],
+    "desc": "Interactive world model streaming in real time - a different way to build something playable.",
+    "url": "https://github.com/Riemann-Dynamics/Matrix-Game-3.5",
+    "stars": 174,
+    "topics": ["game", "world-model", "inference"],
+    "created": "2026-09-01T00:00:00Z"
+  },
+  {
+    "source": "github",
+    "id": "cathrynlavery/diagram-design",
+    "title": "cathrynlavery/diagram-design",
+    "meta": ["HTML", "MIT", "⭐46.6k", "created 2026-04-16"],
+    "desc": "Editorial diagram skill: 42 chart types, self-contained HTML and SVG, deliberately not Mermaid.",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "stars": 46600,
+    "topics": ["docs", "diagrams", "svg"],
+    "created": "2026-04-16T00:00:00Z"
+  }
+]

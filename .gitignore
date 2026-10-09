@@ -1,0 +1,4 @@
+.env
+radar
+*.bak
+digests/*.generated.txt
