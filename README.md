@@ -66,6 +66,10 @@ flowchart LR
 Every source normalises to one item shape, so ranking and rendering never learn
 where something came from, and a new source is one file plus one test.
 
+![tech-radar pipeline: four API sources normalise into one item shape, a rubric of impact, novelty and relevance scores them, the digest escapes and chunks the message and validates it before delivery, delivery is a dry run by default, and every item that has a recorded verdict carries it back into the message](docs/figures/tech-radar-pipeline.png)
+
+**Figure 1.** The pipeline as built, including the half that matters: a closed verdict is not a note in a directory, it travels back into the message. Source: [`docs/figures/tech-radar-pipeline.html`](docs/figures/tech-radar-pipeline.html) (self-contained HTML and SVG).
+
 ## Quickstart
 
 ```bash

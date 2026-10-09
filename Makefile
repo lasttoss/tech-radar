@@ -15,6 +15,7 @@ help:
 	@echo "make up / down    docker compose: dry run, or delivery when .env has a token"
 	@echo "make map / logs   docker compose logs -f"
 	@echo "make chart        helm lint --strict + helm template on charts/tech-radar"
+	@echo "make diagram      check docs/figures: source committed, png present, not stale"
 	@echo "make lint         gofmt + go vet"
 	@echo "make build        build the binary and run it once offline"
 	@echo "make record       refresh the fixtures from the live APIs (needs network)"
@@ -52,6 +53,13 @@ HELM  := docker run --rm -v $(PWD):/apps alpine/helm:3.16.3
 # "-" reads stdin: with /dev/stdin the container silently validated nothing and the
 # gate reported success over zero resources, which is worse than no gate at all.
 KCONF := docker run --rm -i ghcr.io/yannh/kubeconform:latest -strict -summary -kubernetes-version 1.30.0 -
+
+# Not a generator: the source HTML is committed and the PNG is exported with the
+# house script, which needs chromium that this repository does not ship. This target
+# is the gate instead - figure present, exported, and not older than its sources.
+diagram:
+	@ls -1 docs/figures/*.html docs/figures/*.png >/dev/null && echo "figures: source + png present"
+	@bash $$HOME/.pi/agent/scripts/diagram-freshness.sh 2>&1 | grep -E "tech-radar|STALE|TOUCHED|NO-META|UNCOMMITTED" || true
 
 chart:
 	@$(HELM) lint --strict /apps/charts/tech-radar
