@@ -1,0 +1,87 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "tech-radar.fullname" . }}
+  labels:
+    {{- include "tech-radar.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.schedule | quote }}
+  timeZone: {{ .Values.timeZone | quote }}
+  suspend: {{ .Values.suspend }}
+  concurrencyPolicy: {{ .Values.concurrencyPolicy }}
+  successfulJobsHistoryLimit: {{ .Values.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.failedJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      backoffLimit: {{ .Values.backoffLimit }}
+      template:
+        metadata:
+          labels:
+            {{- include "tech-radar.selectorLabels" . | nindent 12 }}
+            {{- with .Values.podLabels }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          {{- with .Values.podAnnotations }}
+          annotations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+        spec:
+          restartPolicy: {{ .Values.restartPolicy }}
+          {{- if .Values.serviceAccount.create }}
+          serviceAccountName: {{ default (include "tech-radar.fullname" .) .Values.serviceAccount.name }}
+          {{- end }}
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 65532
+            fsGroup: 65532
+            seccompProfile:
+              type: RuntimeDefault
+          containers:
+            - name: radar
+              image: {{ include "tech-radar.image" . }}
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              args:
+                - "--items"
+                - "testdata/fixtures/items.json,testdata/fixtures/items-scan-2026-09.json"
+                - "--limit"
+                - {{ .Values.limit | quote }}
+                {{- if .Values.delivery.enabled }}
+                - "--send"
+                {{- end }}
+              env:
+                - name: TZ
+                  value: {{ .Values.timeZone | quote }}
+              {{- if .Values.delivery.enabled }}
+              # envFrom is a sibling of env, not a child. Nesting it inside env is
+              # valid YAML in the file and invalid Kubernetes in the cluster, and
+              # helm lint never saw it because the default values never render this
+              # branch - which is why make chart renders both combinations.
+              envFrom:
+                - secretRef:
+                    name: {{ default (include "tech-radar.fullname" .) .Values.telegram.existingSecret }}
+              {{- end }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+              securityContext:
+                allowPrivilegeEscalation: false
+                readOnlyRootFilesystem: true
+                capabilities:
+                  drop: ["ALL"]
+              volumeMounts:
+                - name: tmp
+                  mountPath: /tmp
+          volumes:
+            - name: tmp
+              emptyDir: {}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}

@@ -13,8 +13,12 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.25"
-      - name: go test -race
-        run: go test -race ./...
+      # -coverprofile because the standard asks for a coverage number in CI, and a
+      # number nobody prints is a number nobody reads.
+      - name: go test -race with coverage
+        run: |
+          go test -race -coverprofile=cover.out -covermode=atomic ./...
+          go tool cover -func=cover.out | tail -1
 
   lint:
     runs-on: ubuntu-latest
@@ -29,6 +33,36 @@ jobs:
         run: test -z "$(gofmt -l .)"
       - name: go vet
         run: go vet ./...
+
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker build
+        run: docker build -t tech-radar:ci .
+      # The image is expected to work with no network and no token: the fixtures
+      # and the verdict log are inside it.
+      - name: run the image offline
+        run: docker run --rm tech-radar:ci --items testdata/fixtures/items-scan-2026-09.json --limit 3 | tail -3
+
+  chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v4
+        with:
+          version: v3.16.3
+      - name: helm lint --strict
+        run: helm lint --strict charts/tech-radar
+      # Both branches, then the schema: lint renders defaults only, and the default
+      # here is the dry run, so an invalid delivery branch would pass lint and fail
+      # on install. This is not hypothetical - it happened while writing the chart.
+      - name: render dry run and delivery, then validate
+        run: |
+          curl -sSLo /tmp/kubeconform.tar.gz https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz
+          tar -xzf /tmp/kubeconform.tar.gz -C /tmp kubeconform
+          helm template tech-radar charts/tech-radar | /tmp/kubeconform -strict -summary -kubernetes-version 1.30.0 -
+          helm template tech-radar charts/tech-radar --set delivery.enabled=true --set telegram.existingSecret=radar-telegram | /tmp/kubeconform -strict -summary -kubernetes-version 1.30.0 -
 
   digest:
     runs-on: ubuntu-latest

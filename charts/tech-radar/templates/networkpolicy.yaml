@@ -1,0 +1,27 @@
+{{- if .Values.networkPolicy.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "tech-radar.fullname" . }}
+  labels:
+    {{- include "tech-radar.labels" . | nindent 4 }}
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "tech-radar.selectorLabels" . | nindent 6 }}
+  policyTypes: [Egress]
+  # No ingress rule at all: nothing should be able to reach this pod, and it has no
+  # port to reach.
+  egress:
+    - to:
+        - namespaceSelector: {}
+          podSelector:
+            matchLabels:
+              k8s-app: kube-dns
+      ports:
+        - protocol: UDP
+          port: {{ .Values.networkPolicy.dnsPort }}
+    - ports:
+        - protocol: TCP
+          port: 443
+{{- end }}

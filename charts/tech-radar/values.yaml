@@ -1,0 +1,61 @@
+image:
+  repository: ghcr.io/lasttoss/tech-radar
+  tag: ""            # defaults to appVersion
+  pullPolicy: IfNotPresent
+
+# 04:00 UTC = 11:00 in Vietnam, which is when the digest is actually read.
+schedule: "0 4 * * *"
+timeZone: UTC
+suspend: false
+# Never let two runs overlap: the second would score the same day again.
+concurrencyPolicy: Forbid
+successfulJobsHistoryLimit: 3
+failedJobsHistoryLimit: 3
+restartPolicy: OnFailure
+backoffLimit: 2
+
+# How many items the digest carries.
+limit: 6
+
+# delivery.enabled=false keeps the radar a dry run: it prints what it would send
+# into the pod log. Turning it on needs a token, from an existing secret or from
+# the value below (which lands in a Secret, never in the CronJob spec).
+delivery:
+  enabled: false
+telegram:
+  existingSecret: ""
+  botToken: ""
+  chatId: ""
+# Optional: unauthenticated GitHub search is rate limited per IP.
+github:
+  existingSecret: ""
+  token: ""
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+serviceAccount:
+  create: true
+  name: ""
+  annotations: {}
+
+networkPolicy:
+  # Off by default because the network shape is cluster specific, but the template
+  # is here: the radar only ever talks outwards, so it needs no ingress at all.
+  enabled: false
+  dnsPort: 53
+
+podAnnotations: {}
+podLabels: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# No HorizontalPodAutoscaler and no PodDisruptionBudget, on purpose: this is a
+# CronJob. There is nothing to scale, and a PDB on a pod that exists to finish and
+# exit would block node drains for no benefit. charts/tech-radar/README.md says so.

@@ -1,0 +1,15 @@
+apiVersion: v2
+name: tech-radar
+description: >-
+  Daily Hugging Face + GitHub radar. A CronJob that produces a scored digest and
+  delivers it: dry run by default, delivery only when a token is provided.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://github.com/lasttoss/tech-radar
+sources:
+  - https://github.com/lasttoss/tech-radar
+maintainers:
+  - name: Tran Trung Dung
+    url: https://github.com/lasttoss
+keywords: [tech-radar, huggingface, github, telegram, cronjob, digest]

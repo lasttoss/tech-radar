@@ -80,3 +80,20 @@ the files exist. In CI the test job passed for the same reason the build job fai
 `go test ./...` cannot report a package that is not in the repository. The line is
 `/radar` now, anchored to the repository root, and the lesson is worth keeping -
 a red job is sometimes the first evidence that a file is missing rather than broken.
+
+## A green gate that validated nothing, and a lint that cannot see your branches
+
+Both of these were caught by insisting the gate prove it can fail.
+
+**`helm lint --strict` renders the default values only.** The default here is the
+dry run, so the delivery branch of the CronJob was never rendered - and it was
+broken: `envFrom` sat nested inside `env`, which is fine YAML in the file and
+invalid Kubernetes in the cluster. Lint passed, the install would have failed. So
+`make chart` renders both combinations, and CI does the same.
+
+**`kubeconform ... /dev/stdin` inside a container validated zero resources** and
+reported success: `0 resource found in 0 file`. The fix is `-` instead of
+`/dev/stdin`, and the reason it matters is that a gate reporting success over
+nothing is worse than no gate - it buys confidence it has not earned. The gate was
+then shown to fail: a deliberately broken chart (`schedule: 0400`, a number where
+Kubernetes wants a string) turns `make chart` red.

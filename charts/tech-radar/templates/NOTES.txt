@@ -1,0 +1,13 @@
+tech-radar is installed as a CronJob.
+
+  schedule : {{ .Values.schedule }} ({{ .Values.timeZone }})
+  delivery : {{ if .Values.delivery.enabled }}on - the digest is sent{{ else }}OFF - dry run, the digest is printed into the pod log{{ end }}
+
+Watch what it would send, without waiting for the schedule:
+
+  kubectl create job --from=cronjob/{{ include "tech-radar.fullname" . }} radar-now
+  kubectl logs job/radar-now
+
+Check the image can work with no network and no token:
+
+  helm test {{ .Release.Name }}
