@@ -1,4 +1,8 @@
 .env
-radar
+# The built binary, at the repository root only. A bare "radar" here matches any
+# path component named radar - which swallowed cmd/radar/ and its tests, and the
+# only reason it was noticed is that CI could not build a package that was never
+# committed.
+/radar
 *.bak
 digests/*.generated.txt

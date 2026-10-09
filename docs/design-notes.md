@@ -70,3 +70,13 @@ to the code. The checks here are the ones that ship with the toolchain.
   again. Idempotency belongs here and is not written yet.
 - **The search API is the fragile source** without a token: rate limited per IP,
   and it failed on the first attempt during development.
+
+## The .gitignore that ate a source directory
+
+CI caught something no local run could. A bare `radar` line in `.gitignore`, meant
+for the built binary, matched any path component with that name - so `cmd/radar/`
+and its test were never committed. Locally everything was green, because locally
+the files exist. In CI the test job passed for the same reason the build job failed:
+`go test ./...` cannot report a package that is not in the repository. The line is
+`/radar` now, anchored to the repository root, and the lesson is worth keeping -
+a red job is sometimes the first evidence that a file is missing rather than broken.
