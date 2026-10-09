@@ -1,5 +1,7 @@
 # tech-radar
 
+[![ci](https://github.com/lasttoss/tech-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/lasttoss/tech-radar/actions/workflows/ci.yml)
+
 A daily technology radar: signals from Hugging Face and GitHub, scored by a rubric
 that is written down and tested, delivered as a message, and closed out as
 decisions. Go, no dependencies outside the standard library, and a demo that runs
