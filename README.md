@@ -140,6 +140,20 @@ On delivery specifically: the send path is tested against a local HTTP server
 repository has never sent a message - doing that needs a token, and the first real
 send should be yours.
 
+## Repository standard
+
+Six items, applied where they mean something rather than everywhere. The exclusions are the point of
+the table: an item that cannot be honest in a repository of this kind is left out and said so.
+
+| Item | Here |
+|---|---|
+| `docker-compose.yml` | ✓ `docker-compose.yml` |
+| `Dockerfile` | ✓ `Dockerfile`, distroless and non-root |
+| Helm chart | ✓ `charts/tech-radar/` (a CronJob, because the job runs once a day and exits) |
+| Diagram | ✓ `docs/figures/tech-radar-pipeline.html` plus the exported PNG the README embeds |
+| Tests, run in CI | ✓ go test -race with coverage, gofmt, go vet, docker build |
+| CI + `Makefile` | ✓ `.github/workflows/ci.yml` and `Makefile` |
+
 ## License
 
 MIT. Nothing here comes from a work project: see `PROVENANCE.md`.
